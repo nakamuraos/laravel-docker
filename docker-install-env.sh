@@ -1,14 +1,13 @@
 #!/bin/bash
 
 # install env
-apt-get install htop nano wget -y
+apt-get install wget -y
+apt-get install lsb-release apt-transport-https ca-certificates software-properties-common -y
 
 # install php8
-apt-get install lsb-release apt-transport-https ca-certificates -y
-wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
-echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | tee /etc/apt/sources.list.d/php.list
+add-apt-repository ppa:ondrej/php -y
 apt-get update -y
-apt-get install php8* -y
+apt-get install openssl php8.0-cli php8.0-common php8.0-curl php8.0-fpm php8.0-mbstring php8.0-mysql php8.0-xml php8.0-zip -y
 
 # install composer
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
