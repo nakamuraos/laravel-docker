@@ -10,5 +10,7 @@ echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | tee /etc/apt
 apt-get update -y
 apt-get install php8* -y
 
-# install mariadb
-apt-get install mariadb-server -y
+# install composer
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
