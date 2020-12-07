@@ -28,21 +28,15 @@ docker run -p 8080:8080 laravel-docker:latest
 - Open browser and go to http://localhost:8080.
 
 ## Update Source code's Laravel
+Execute in branch `docker`:
+
 - Add remote git:
 ```
 git remote add laravel https://github.com/laravel/laravel.git
 ```
-- Switch to branch (8.x for example):
+- Make git pull update latest & merge:
 ```
-git checkout laravel/8.x
-```
-- Make git pull:
-```
-git pull laravel 8.x
-```
-- Checkout to docker branch and merge:
-```
-git checkout origin/docker && git merge laravel/8.x
+git pull laravel laravel/8.x && git merge laravel/8.x
 ```
 
 You can also update from source code's [GitHub/Laravel](https://github.com/laravel/laravel)
