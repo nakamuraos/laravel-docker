@@ -2,6 +2,9 @@
 
 This repository cloned from [GitHub/Laravel](https://github.com/laravel/laravel). From this repository, you can run Laravel inside Docker container.
 
+## TODO:
+- Deploy in Jenkins
+
 ## Build Docker
 
 - Clone this repository:
@@ -23,6 +26,10 @@ docker build -t laravel-docker:latest -f Dockerfile .
 - Run docker container:
 ```
 docker run -p 8080:8080 laravel-docker:latest
+
+# OR
+# You can mount laravel's home folder to external:
+docker run -p 8080:8080 -v ./laravel-docker:/home/laravel laravel-docker:latest
 ```
 
 - Open browser and go to http://localhost:8080.
