@@ -34,7 +34,7 @@ git remote add laravel https://github.com/laravel/laravel.git
 ```
 - Switch to branch (8.x for example):
 ```
-git checkout 8.x
+git checkout laravel/8.x
 ```
 - Make git pull:
 ```
@@ -42,7 +42,7 @@ git pull laravel 8.x
 ```
 - Checkout to docker branch and merge:
 ```
-git checkout docker && git merge 8.x
+git checkout origin/docker && git merge laravel/8.x
 ```
 
 You can also update from source code's [GitHub/Laravel](https://github.com/laravel/laravel)
