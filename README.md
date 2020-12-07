@@ -46,4 +46,4 @@ git remote add laravel https://github.com/laravel/laravel.git
 git pull laravel laravel/8.x && git merge laravel/8.x
 ```
 
-You can also update manually from source code's [GitHub/Laravel](https://github.com/laravel/laravel)
+You can also update manually from [GitHub/Laravel](https://github.com/laravel/laravel)'s source code
